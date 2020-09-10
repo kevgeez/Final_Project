@@ -1,11 +1,11 @@
 :root {
     --white: #fff;
-    --navLinksColor: #656d78;
+    --navLinksColor: #f8f5f1;
     --logoColor: #174578;
     --sectionH1Color: #1c2f3a;
     --mainParaColor: #3b2325;
     --btnBgColor: #fc6e51;
-    --sectionParaColor: #656d78;
+    --sectionParaColor: #192331;
     --skillsCardColor: #4fc1e9;
     --skillsH3Color: #3e3b3d;
     --certsCardColor: #4fc1e9;
@@ -19,48 +19,46 @@
     --indeedColor: rgb(7, 170, 224);
 }
 
+body,
+html {
+    background-image: url("../img/downtown.gif");
+}
+
+
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 figure {
     margin: 0;
 }
-
 li {
     list-style: none;
 }
-
 a {
     text-decoration: none;
 }
-
 .container {
     height: 100vh;
 }
-
 .wrapper {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
 }
-
 .content-side {
     padding-left: 50px;
 }
-
 header,
 nav ul {
     display: flex;
     flex-wrap: wrap;
 }
-
 header {
     height: 150px;
 }
-
 .logo {
     padding-right: 100px;
     font-size: 2rem;
@@ -69,18 +67,24 @@ header {
     color: var(--logoColor);
     cursor: pointer;
 }
-
 nav li {
     margin-right: 75px;
     font-size: 1.3rem;
     line-height: 75px;
     display: flex;
 }
-
 li a {
     color: var(--navLinksColor);
 }
-
+section {
+    width: 42%;
+    height: 60%;
+    color: #fff;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
 .main,
 .about,
 .skills-card,
@@ -90,7 +94,6 @@ li a {
     padding: 15px 0 0 50px;
     position: absolute;
 }
-
 .about,
 .skills,
 .degrees,
@@ -98,7 +101,6 @@ li a {
 .contact {
     opacity: 0;
 }
-
 .main h1,
 .about h1,
 .certs h1,
@@ -106,7 +108,6 @@ li a {
 .skills h1 {
     font-size: 3rem;
 }
-
 .certs,
 h1,
 .degrees,
@@ -116,11 +117,9 @@ h1 {
     font-size: 1rem;
     color: var(--sectionH1Color);
 }
-
 h1:nth-child(2) {
     margin-bottom: 20px;
 }
-
 .main p {
     font-size: 1.5rem;
     color: var(--mainParaColor);
@@ -129,7 +128,6 @@ h1:nth-child(2) {
     text-align: justify;
     text-align-last: left;
 }
-
 .main a,
 .about a,
 .certs a,
@@ -143,7 +141,6 @@ h1:nth-child(2) {
     font-size: 1.5rem;
     border-radius: 50px;
 }
-
 .about h1,
 .skills h1,
 .certs h1,
@@ -151,7 +148,6 @@ h1:nth-child(2) {
 .contact h1 {
     margin-bottom: 2px;
 }
-
 .about p,
 .certs p,
 .degrees p,
@@ -162,7 +158,6 @@ h1:nth-child(2) {
     margin-bottom: 40px;
     text-align: justify;
 }
-
 .skills,
 .certs,
 .degrees,
@@ -170,14 +165,12 @@ h1:nth-child(2) {
     padding: 100px 0 0 50px;
     position: absolute;
 }
-
 .skills-card {
     display: flex;
     flex-wrap: flex;
     text-align: center;
     max-width: 50px;
 }
-
 .skills-card div {
     border: 2px solid var(--skillsCardColor);
     padding: 2px;
@@ -185,7 +178,6 @@ h1:nth-child(2) {
     position: relative;
     z-index: 1;
 }
-
 .skills-card div::after {
     content: '';
     width: 100%;
@@ -197,19 +189,15 @@ h1:nth-child(2) {
     z-index: -1;
     transition: .5s ease;
 }
-
 .skills-card div:hover::after {
     height: 100%;
 }
-
 .skills-card div:hover p {
     color: var(--white);
 }
-
 .skills-card div:first-child {
     margin-left: 0;
 }
-
 .skills-card p {
     max-width: 100px;
     font-size: .9rem;
@@ -217,24 +205,20 @@ h1:nth-child(2) {
     color: var(--sectionParaColor);
     font-weight: 100;
 }
-
 .skills img {
     width: 60px;
 }
-
 .skills h3 {
     text-transform: uppercase;
     color: var(--skillsH3Color);
     margin-top: 5px;
 }
-
 .degree-cards {
     display: flex;
     flex-wrap: flex;
     text-align: center;
     max-width: 50px;
 }
-
 .degree-cards div {
     border: 2px solid var(--certsCardColor);
     padding: 2px;
@@ -242,7 +226,6 @@ h1:nth-child(2) {
     position: relative;
     z-index: 1;
 }
-
 .degree-cards div::after {
     content: '';
     width: 100%;
@@ -254,19 +237,15 @@ h1:nth-child(2) {
     z-index: -1;
     transition: .5s ease;
 }
-
 .degree-cards div:hover::after {
     height: 100%;
 }
-
 .degree-cards div:hover p {
     color: var(--white);
 }
-
 .degree-cards div:first-child {
     margin-left: 0;
 }
-
 .degree-cards p {
     max-width: 100px;
     font-size: .9rem;
@@ -274,24 +253,20 @@ h1:nth-child(2) {
     color: var(--sectionParaColor);
     font-weight: 100;
 }
-
 .degree-cards img {
     width: 100%;
 }
-
 .degree h3 {
     text-transform: uppercase;
     color: var(--skillsH3Color);
     margin-top: 5px;
 }
-
 .certs-cards {
     display: flex;
     flex-wrap: flex;
     text-align: center;
     max-width: 50px;
 }
-
 .certs-cards div {
     border: 2px solid var(--certsCardColor);
     padding: 2px;
@@ -299,7 +274,6 @@ h1:nth-child(2) {
     position: relative;
     z-index: 1;
 }
-
 .certs-cards div::after {
     content: '';
     width: 100%;
@@ -311,19 +285,15 @@ h1:nth-child(2) {
     z-index: -1;
     transition: .5s ease;
 }
-
 .certs-cards div:hover::after {
     height: 100%;
 }
-
 .certs-cards div:hover p {
     color: var(--white);
 }
-
 .certs-cards div:first-child {
     margin-left: 0;
 }
-
 .certs-cards p {
     max-width: 100px;
     font-size: .9rem;
@@ -331,73 +301,76 @@ h1:nth-child(2) {
     color: var(--sectionParaColor);
     font-weight: 100;
 }
-
 .certs img {
     width: 65px;
 }
-
 .certs h3 {
     text-transform: uppercase;
     color: var(--skillsH3Color);
     margin-top: 5px;
 }
-
 form {
     max-width: 500px;
 }
-
 input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 2px solid var(--inputBorderColor);
 }
-
 textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 2px solid var(--inputBorderColor);
 }
-
 button {
     border: none;
     cursor: pointer;
 }
-
 button:focus,
 .input:focus,
 textarea:focus {
     outline: none;
 }
-
 .main-animation {
-    animation: animate 1s;
+    animation: animate 2s;
 }
-
 @keyframes animate {
     from {
         margin-top: 30px;
     }
+    
     to {
         margin-top: 0;
     }
 }
-
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+    
+    100% {
+        background-position: 0 50%;
+    }
+}
 @-webkit-keyframes animate {
     from {
         margin-top: 30px;
     }
+    
     to {
         margin-top: 0;
     }
 }
-
 .assets-side {
     display: grid;
     grid-template-columns: 1fr .15fr;
 }
-
 .assets-side img {
     width: 350px;
     position: relative;
@@ -405,30 +378,24 @@ textarea:focus {
     right: 80%;
     transform: translateX(-70%);
 }
-
 .glassdoor,
 .indeed,
 .monster,
 .linkedin {
     height: calc(100% /4);
 }
-
 .glassdoor {
     background-color: var(--glassdoorColor);
 }
-
 .indeed {
     background-color: var(--indeedColor);
 }
-
 .monster {
     background-color: var(--monsterColor);
 }
-
 .linkedin {
     background-color: var(--linkedinColor);
 }
-
 .links a {
     writing-mode: vertical-rl;
     font-size: 1.5rem;
@@ -438,7 +405,6 @@ textarea:focus {
     text-align: center;
     padding-right: 30px;
 }
-
 .open-model {
     width: 60px;
     height: 60px;
@@ -454,7 +420,6 @@ textarea:focus {
     text-align: center;
     cursor: pointer;
 }
-
 .model {
     position: fixed;
     top: 0;
@@ -467,7 +432,6 @@ textarea:focus {
     transform: scale(1.1);
     transition: visibility 0s linear .25s, opacity .25s 0s, transform .25s;
 }
-
 .model-content {
     background-color: var(--white);
     position: absolute;
@@ -477,27 +441,22 @@ textarea:focus {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .model-content h1 {
     color: var(--modelH1Color);
     font-weight: 300;
     padding: 30px 0 10px 0;
 }
-
 .model-content div {
     display: flex;
     flex-wrap: wrap;
 }
-
 .model-content img {
     width: 40px;
     margin: 0 30px 20px 0;
 }
-
 .model-content p {
     margin-top: 10px;
 }
-
 .close-model {
     font-size: 2rem;
     cursor: pointer;
@@ -505,7 +464,6 @@ textarea:focus {
     top: 5px;
     right: 20px;
 }
-
 .show-model {
     opacity: 1;
     visibility: visible;

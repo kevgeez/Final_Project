@@ -50,7 +50,6 @@ function handleAnimation() {
     }
 }
 
-
 logo.addEventListener('click', function() {
     handleOpacity(main, about, skills, degrees, certs, contact);
     handleAnimation(mainH1, mainH12, mainPara, mainAnker);
