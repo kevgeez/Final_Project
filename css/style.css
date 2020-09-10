@@ -80,7 +80,7 @@ section {
     width: 42%;
     height: 60%;
     color: #fff;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #3b3938, #856f79, #404d52, #f7f8f8);
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
@@ -221,8 +221,8 @@ h1:nth-child(2) {
 }
 .degree-cards div {
     border: 2px solid var(--certsCardColor);
-    padding: 2px;
-    margin: 10px 10px;
+    padding: 30px;
+    margin: 1px 1px;
     position: relative;
     z-index: 1;
 }
@@ -254,7 +254,8 @@ h1:nth-child(2) {
     font-weight: 100;
 }
 .degree-cards img {
-    width: 100%;
+    width: 120%;
+    align-content: center;
 }
 .degree h3 {
     text-transform: uppercase;
