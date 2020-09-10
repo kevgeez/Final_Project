@@ -398,12 +398,8 @@ textarea:focus {
     grid-template-columns: 1fr .15fr;
 }
 
-.img {
-    background-color: var(--profileBgColor);
-}
-
 .assets-side img {
-    width: 300px;
+    width: 350px;
     position: relative;
     left: 83.5%;
     right: 80%;
